@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #171513;
+    --side: #1e1a17;
+    --card: #24201c;
+    --border: #3a332c;
+    --text: #eee5d7;
+    --muted: #95897c;
+    --gold: #d79a3d;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Lora", Georgia, serif;
+}
+
+.sidebar {
+    position: fixed;
+    width: 235px;
+    height: 100vh;
+    padding: 30px 20px;
+    background: var(--side);
+    border-right: 1px solid var(--border);
+}
+
+.sidebar h1 {
+    font: 700 36px "Caveat", cursive;
+    margin-bottom: 45px;
+}
+
+.sidebar h1 span {
+    color: var(--gold);
+}
+
+.sidebar small {
+    display: block;
+    margin: 25px 10px 10px;
+    color: #756b61;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+nav a {
+    display: block;
+    padding: 11px 12px;
+    margin: 4px 0;
+    color: #a79b8d;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav .active {
+    color: var(--text);
+    background: #302a24;
+}
+
+nav .active {
+    border-left: 3px solid var(--gold);
+}
+
+.note {
+    position: absolute;
+    bottom: 30px;
+    color: #655d55;
+    font: 18px "Caveat", cursive;
+}
+
+main {
+    width: calc(100% - 235px);
+    margin-left: 235px;
+    padding: 30px 38px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.welcome {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+header h2 {
+    font: 600 32px "Caveat", cursive;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: var(--gold);
+    color: #211a14;
+    border-radius: 50%;
+    font: bold 22px "Caveat", cursive;
+}
+
+.search {
+    display: flex;
+    width: 520px;
+    height: 44px;
+    margin-bottom: 25px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.search span {
+    padding: 8px 14px;
+    color: var(--muted);
+    font-size: 22px;
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+}
+
+.search button {
+    padding: 0 18px;
+    border: 0;
+    border-left: 1px solid var(--border);
+    background: #2d2721;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.hero {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero img,
+.shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero img {
+    object-fit: cover;
+}
+
+.shade {
+    background: linear-gradient(90deg, #171513f5, #171513a8, #17151322);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    width: 480px;
+}
+
+.hero-text label,
+.heading label {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    margin: 8px 0;
+    font: 700 65px "Caveat", cursive;
+}
+
+.hero-text p {
+    width: 410px;
+    color: #c8bdb0;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.details {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    color: #b3a79a;
+    font-size: 11px;
+}
+
+.details span:last-child {
+    color: var(--gold);
+}
+
+.watch {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--gold);
+    color: #211a14;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 18px;
+}
+
+.heading h2 {
+    font: 600 30px "Caveat", cursive;
+}
+
+.heading a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 17px;
+}
+
+.movie {
+    min-width: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.movie:hover {
+    transform: translateY(-5px);
+    border-color: #675543;
+}
+
+.poster {
+    position: relative;
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+    background: #111;
+}
+
+.poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster button {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: #171513dd;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.poster button.saved {
+    background: var(--gold);
+    color: #211a14;
+}
+
+.poster span {
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    padding: 4px 7px;
+    border-radius: 4px;
+    background: #171513e8;
+    color: var(--gold);
+    font-size: 10px;
+}
+
+.info {
+    height: 78px;
+    padding: 12px;
+}
+
+.info h3 {
+    margin-bottom: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info p {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+section {
+    margin-bottom: 42px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-top: 1px solid #2d2823;
+    color: #655d55;
+    font: 17px "Caveat", cursive;
+}

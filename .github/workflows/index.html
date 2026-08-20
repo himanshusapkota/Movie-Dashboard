@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Moviez Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<aside class="sidebar">
+
+    <div class="logo">
+        Moviez<span>Hub</span>
+    </div>
+
+    <div class="menu-title">MENU</div>
+
+    <nav>
+        <a href="#" class="active">⌂ Dashboard</a>
+        <a href="#">Trending</a>
+        <a href="#">Movies</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Favorites</a>
+    </nav>
+
+    <div class="menu-title">LIBRARY</div>
+
+    <nav>
+        <a href="#">History</a>
+        <a href="#">Downloads</a>
+    </nav>
+
+    <div class="menu-title">OTHER</div>
+
+    <nav>
+        <a href="#">Settings</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="sidebar-note">
+        <span>Made for movie lovers.</span>
+    </div>
+
+</aside>
+
+
+<main>
+
+    <header>
+
+        <div>
+            <p class="welcome">Welcome back,</p>
+            <h1>Find something good to watch.</h1>
+        </div>
+
+        <div class="profile">
+            <div class="profile-text">
+                <strong>Movie Lover</strong>
+                <small>Indian Cinema</small>
+            </div>
+
+            <div class="avatar">M</div>
+        </div>
+
+    </header>
+
+
+    <div class="search-row">
+
+        <div class="search-box">
+            <span>⌕</span>
+
+            <input
+                id="search"
+                type="text"
+                placeholder="Search movies..."
+                onkeyup="searchMovies()"
+            >
+        </div>
+
+        <button class="filter-btn" onclick="showAllMovies()">
+            All Movies
+        </button>
+
+    </div>
+
+
+    <section class="hero">
+
+        <img src="images/hero.jpg" alt="Featured movie">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="tag">FEATURED TONIGHT</span>
+
+            <h2>3 Idiots</h2>
+
+            <p>
+                Three friends, college life, unforgettable memories
+                and a story about following your passion.
+            </p>
+
+            <div class="hero-details">
+                <span>2009</span>
+                <span>Comedy</span>
+                <span> 8.4</span>
+            </div>
+
+            <button class="watch-btn">
+                 Watch Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="movie-section">
+
+        <div class="section-heading">
+            <div>
+                <span class="tiny-title">INDIAN CINEMA</span>
+                <h2>Trending in India</h2>
+            </div>
+
+            <a href="#">View all →</a>
+        </div>
+
+
+        <div class="movies">
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/1.webp" alt="3 Idiots">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.4</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>3 Idiots</h3>
+                    <p>2009 · Comedy · Drama</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/2.webp" alt="Dangal">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.3</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Dangal</h3>
+                    <p>2016 · Drama · Sport</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/3.webp" alt="RRR">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 7.8</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>RRR</h3>
+                    <p>2022 · Action · Drama</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/4.webp" alt="KGF Chapter 2">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.3</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>KGF Chapter 2</h3>
+                    <p>2022 · Action · Drama</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/5.webp" alt="Baahubali 2">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.2</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Baahubali 2</h3>
+                    <p>2017 · Action · Fantasy</p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="movie-section">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="tiny-title">PEOPLE ARE WATCHING</span>
+                <h2>Popular This Week</h2>
+            </div>
+
+            <a href="#">View all →</a>
+
+        </div>
+
+
+        <div class="movies">
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/6.webp" alt="Jawan">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 6.9</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Jawan</h3>
+                    <p>2023 · Action · Thriller</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/7.webp" alt="Chhichhore">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.3</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Chhichhore</h3>
+                    <p>2019 · Comedy · Drama</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/8.webp" alt="Drishyam 2">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.2</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Drishyam 2</h3>
+                    <p>2022 · Crime · Thriller</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/9.webp" alt="Pathaan">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating">★ 5.8</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Pathaan</h3>
+                    <p>2023 · Action · Thriller</p>
+                </div>
+
+            </article>
+
+
+            <article class="movie">
+
+                <div class="poster">
+                    <img src="images/10.webp" alt="Zindagi Na Milegi Dobara">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(this)"
+                    >♡</button>
+
+                    <span class="rating"> 8.2</span>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Zindagi Na Milegi Dobara</h3>
+                    <p>2011 · Comedy · Drama</p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <span>Moviez Hub</span>
+        <span>Made with a little love for cinema.</span>
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
